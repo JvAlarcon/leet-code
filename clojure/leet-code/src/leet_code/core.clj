@@ -1,4 +1,4 @@
-(ns leet-clojure.core
+(ns leet-code.core
   (:gen-class))
 
 (defn -main

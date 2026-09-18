@@ -1,13 +1,13 @@
-/target
-/classes
-/checkouts
+# Clojure and Java
+target/
+classes/
 profiles.clj
 pom.xml
 pom.xml.asc
 *.jar
 *.class
-/.lein-*
-/.nrepl-port
+.lein-*
+.nrepl-port
 .hgignore
 .hg/
 .clj-kondo/
@@ -18,3 +18,6 @@ tmp/
 build/
 .metadata
 RemoteSystemsTempFiles/
+
+# Erlang
+*.beam
