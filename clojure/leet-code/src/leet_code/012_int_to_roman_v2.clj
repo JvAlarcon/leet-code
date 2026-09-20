@@ -13,7 +13,7 @@
 (defn translate [dictionary number acc]
   (cond
     (<= number 0) acc
-    (empty? acc) acc
+    (empty? dictionary) acc
     :else
     (let [[key value] (first dictionary)
           tail (rest dictionary)]
@@ -23,5 +23,5 @@
 
 (defn int-to-roman [num]
   (if (zero? num)
-    ""
+    "nulla"
     (translate roman-dictionary num "")))
