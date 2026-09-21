@@ -13,11 +13,15 @@ convert_number_to_binary_string(N, Acc) when N =< 0 ->
 convert_number_to_binary_string(N, Acc) ->
     NewNumber = N div 2,
     Rest = integer_to_list(N rem 2),
-    convert_number_to_binary_string(NewNumber, Acc ++ Rest).
+    convert_number_to_binary_string(NewNumber, Rest ++ Acc).
+
+-spec convert_number_to_binary_string(N :: integer()) -> string().
+convert_number_to_binary_string(N) ->
+    convert_number_to_binary_string(N, "").
 
 -spec hamming_weight(N :: integer()) -> integer().
 hamming_weight(N) ->
-    BinaryString = convert_number_to_binary_string(N, ""),
+    BinaryString = convert_number_to_binary_string(N),
     CharList = [[C] || C <- BinaryString],
     NumberList = [list_to_integer(X) || X <- CharList],
     FilteredList = lists:filter(fun(E) -> E == 1 end, NumberList),
