@@ -1,4 +1,4 @@
--module('number_of_1_bits').
+-module(lc191_number_of_1_bits).
 -export([hamming_weight/1]).
 
 % https://leetcode.com/problems/number-of-1-bits/

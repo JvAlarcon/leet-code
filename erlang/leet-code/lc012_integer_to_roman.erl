@@ -1,4 +1,4 @@
--module(integer_to_roman).
+-module(lc012_integer_to_roman).
 -export([int_to_roman/1]).
 
 ; https://leetcode.com/problems/integer-to-roman/description/
@@ -9,6 +9,8 @@ roman_dictionary() ->
      {9, "IX"}, {5, "V"}, {4, "IV"},
      {1, "I"}].
 
+% If number is greater than key, mantain the dictionary
+% If not, remove the head from list, and pass the tail to the dictionary
 translate(_, Number, Acc) when Number =< 0 ->
     Acc;
 translate([], _, Acc) ->
@@ -21,10 +23,6 @@ translate(Dictionary, Number, Acc) ->
 	true ->
 	    translate(Tail, Number, Acc)
     end.
-
-% If number is greater than key, mantain the dictionary
-% If not, remove the head from list, and pass the tail to the dictionary
-    
 
 -spec int_to_roman(Num :: integer()) -> unicode:unicode_binary().
 % As its expected a binary result, I need to translate string to binary

@@ -1,8 +1,5 @@
--module('reverse_bits').
--export([reverse_bits/1,
-              convert_number_to_binary_string/1,
-              reverse/1,
-              convert_binary_int_to_decimal/1]).
+-module(lc190_reverse_bits).
+-export([reverse_bits/1).
 
 % https://leetcode.com/problems/reverse-bits/
 

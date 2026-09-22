@@ -1,4 +1,4 @@
--module('palindrome_number').
+-module(lc009_palindrome_number).
 -export([is_palindrome/1]).
 
 % https://leetcode.com/problems/palindrome-number/description/

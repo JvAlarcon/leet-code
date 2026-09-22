@@ -1,4 +1,4 @@
--module('roman_to_integer').
+-module(lc013_roman_to_integer).
 -export([roman_to_int/1]).
 
 % https://leetcode.com/problems/roman-to-integer/description/
